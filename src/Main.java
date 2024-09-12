@@ -3,8 +3,8 @@ import javax.swing.*;
 public class Main {
     public static void main(String[] args) {
             //Variaveis//
-            String info = null;
-            String convert = null;
+            String info;
+            String convert;
             int select = -1;
             int attempts = 0;
             boolean valid = false;
@@ -17,7 +17,7 @@ public class Main {
             info = String.format("%n ESCOLHA DIGITANDO O CODIGO DA BEBIDA%n 12 - Café %n 15 - Chá %n 18 - Suco de Laranja %n 25 - Refrigerante %n 40 - Água Mineral %n 0 - Nenhuma opção");
 
             //validar até que o valor seja correto, com limite de 3 tentativas//
-            while (!valid && attempts < 3){
+            while (!valid){
 
                 try{
                     //solicitar escolha//
@@ -46,40 +46,32 @@ public class Main {
 
             }
             //escolha do usuario//
-            if (valid){
-                switch (select) {
-                    case 12:
-                        JOptionPane.showMessageDialog(null, "Você escolheu Café.", "Confirmação", JOptionPane.INFORMATION_MESSAGE);
-                        break;
+        switch (select) {
+            case 12:
+                JOptionPane.showMessageDialog(null, "Você escolheu Café.", "Confirmação", JOptionPane.INFORMATION_MESSAGE);
+                break;
 
 
-                    case 15:
-                        JOptionPane.showMessageDialog(null, "Você escolheu Chá.", "Confirmação", JOptionPane.INFORMATION_MESSAGE);
-                        break;
+            case 15:
+                JOptionPane.showMessageDialog(null, "Você escolheu Chá.", "Confirmação", JOptionPane.INFORMATION_MESSAGE);
+                break;
 
-                    case 18:
-                        JOptionPane.showMessageDialog(null, "Você escolheu Suco de Laranja.", "Confirmação", JOptionPane.INFORMATION_MESSAGE);
-                        break;
+            case 18:
+                JOptionPane.showMessageDialog(null, "Você escolheu Suco de Laranja.", "Confirmação", JOptionPane.INFORMATION_MESSAGE);
+                break;
 
-                    case 25:
-                        JOptionPane.showMessageDialog(null, "Você escolheu Refrigerante.", "Confirmação", JOptionPane.INFORMATION_MESSAGE);
-                        break;
+            case 25:
+                JOptionPane.showMessageDialog(null, "Você escolheu Refrigerante.", "Confirmação", JOptionPane.INFORMATION_MESSAGE);
+                break;
 
-                    case 40:
-                        JOptionPane.showMessageDialog(null, "Você escolheu Água Mineral.", "Confirmação", JOptionPane.INFORMATION_MESSAGE);
-                        break;
+            case 40:
+                JOptionPane.showMessageDialog(null, "Você escolheu Água Mineral.", "Confirmação", JOptionPane.INFORMATION_MESSAGE);
+                break;
 
-                    case 0://Fechar o progama//
-                        JOptionPane.showMessageDialog(null, "Encerrando o programa. Até logo!", "Saída", JOptionPane.INFORMATION_MESSAGE);
-                        System.exit(0);
-                }
-            }
-
-
-
-
-
-
+            case 0://Fechar o progama//
+                JOptionPane.showMessageDialog(null, "Encerrando o programa. Até logo!", "Saída", JOptionPane.INFORMATION_MESSAGE);
+                System.exit(0);
+        }
 
 
     }
